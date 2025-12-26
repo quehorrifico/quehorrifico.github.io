@@ -1,0 +1,128 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Header Styles */
+.header-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headshot {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px; /* Changed to match the box aesthetic */
+    transition: transform 0.2s;
+}
+
+.headshot:hover {
+    transform: scale(1.05);
+}
+
+.header-text {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav button {
+    background-color: #777;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background-color: #0056b3;
+}
+
+/* Section Styles */
+section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: left;
+}
+
+.projects-section .project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.project-card h3 a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+}
+
+.image-gallery .image-container {
+    text-align: center;
+}
+
+.image-gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px; /* Box aesthetic */
+    transition: transform 0.2s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    font-size: 0.8em;
+    color: #555;
+}
