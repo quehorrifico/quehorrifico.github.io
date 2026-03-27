@@ -4,80 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeus Borrego - Home</title>
+    <meta name="description" content="Portfolio and writing home for Zeus Borrego, a software engineer focused on thoughtful products, interactive experiments, and clean systems.">
+    <title>Zeus Borrego | Software Engineer</title>
+    <script>
+        (function () {
+            const storageKey = 'zeus-theme';
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            try {
+                const savedTheme = localStorage.getItem(storageKey);
+                document.documentElement.dataset.theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            } catch (error) {
+                document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
+            }
+        }());
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-    <div class="header-box">
-        <img src="images/headshot.JPG" alt="Zeus Borrego Headshot" class="headshot">
-        <div class="header-text">
-            <h1>Zeus Borrego</h1>
-            <nav>
-                <button class="nav-btn" onclick="window.open('https://www.linkedin.com/in/zeusborrego/', '_blank')">
-                    LinkedIn
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="#top">Zeus Borrego</a>
+            <div class="header-actions">
+                <nav class="site-nav" aria-label="Primary">
+                    <a href="#work">Work</a>
+                    <a href="#writing">Writing</a>
+                    <a href="#home">Home</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch to dark mode">
+                    <span aria-hidden="true">☾</span>
+                    <span class="visually-hidden">Toggle color theme</span>
                 </button>
-                <button class="nav-btn" onclick="window.open('https://github.com/quehorrifico', '_blank')">
-                    GitHub
-                </button>
-                <button class="nav-btn" onclick="window.open('docs/Zeus_Borrego_Resume.pdf', '_blank')">
-                    Resume
-                </button>
-            </nav>
-        </div>
+            </div>
+        </header>
+
+        <main id="top">
+            <section class="hero reveal">
+                <div class="hero-copy">
+                    <p class="eyebrow">Software developer</p>
+                    <h1 class="hero-title">
+                        <span class="hero-title-line">Clean systems.</span>
+                        <span class="hero-title-line">Clear communication.</span>
+                        <span class="hero-title-line">Projects with personality.</span>
+                    </h1>
+                    <div class="hero-actions">
+                        <a class="pill-link" href="docs/Zeus_Borrego_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+                        <a class="pill-link" href="https://github.com/quehorrifico" target="_blank" rel="noreferrer">GitHub</a>
+                        <a class="pill-link" href="https://www.linkedin.com/in/zeusborrego/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a class="pill-link" href="mailto:zeusborrego@gmail.com">Email</a>
+                    </div>
+                </div>
+
+                <aside class="hero-aside">
+                    <img src="images/headshot.JPG" alt="Portrait of Zeus Borrego" class="headshot">
+                </aside>
+            </section>
+
+            <section class="content-section reveal" id="work">
+                <div class="section-heading">
+                    <p class="section-label">Selected work</p>
+                    <h2>Projects I’m happy to walk through in an interview.</h2>
+                </div>
+
+                <div class="card-grid">
+                    <article class="project-card">
+                        <div class="card-topline">
+                            <p class="card-label">Interactive game</p>
+                            <div class="card-links">
+                                <a href="https://quehorrifico.github.io/federal-republic-of-america" target="_blank" rel="noreferrer">Open site</a>
+                                <a href="https://github.com/quehorrifico/federal-republic-of-america" target="_blank" rel="noreferrer">Code</a>
+                            </div>
+                        </div>
+                        <h3>Federal Republic of America</h3>
+                        <p class="tech-stack">React, TypeScript, Vite</p>
+                        <p>
+                            A swipe-decision political strategy game inspired by Democratic Socialism
+                            Simulator. It combines stateful game logic, branching card systems, and
+                            regional loyalty mechanics into a browser-based experience with plenty of
+                            room to grow.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-topline">
+                            <p class="card-label">Live product</p>
+                            <div class="card-links">
+                                <a href="https://www.manatomb.app" target="_blank" rel="noreferrer">Open site</a>
+                                <a href="https://github.com/quehorrifico/manatomb-v3" target="_blank" rel="noreferrer">Code</a>
+                            </div>
+                        </div>
+                        <h3>Mana Tomb</h3>
+                        <p class="tech-stack">Go, PostgreSQL, Scryfall API</p>
+                        <p>
+                            A Magic: The Gathering deck builder and card search tool built around a
+                            clean monolithic Go backend. I designed it as an ad-free alternative for
+                            deck exploration today, with room for deeper analysis features later.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-topline">
+                            <p class="card-label">Team project</p>
+                            <div class="card-links">
+                                <a href="https://github.com/quehorrifico/swatutor" target="_blank" rel="noreferrer">Code</a>
+                            </div>
+                        </div>
+                        <h3>SwaTutor</h3>
+                        <p class="tech-stack">Python, Flask, HTML, CSS, JavaScript</p>
+                        <p>
+                            Built with
+                            <a href="https://www.linkedin.com/in/lucas-pietrantonio/" target="_blank" rel="noreferrer">Lucas Pietrantonio</a>,
+                            <a href="https://www.linkedin.com/in/matthewlucker/" target="_blank" rel="noreferrer">Matthew Lucker</a>, and
+                            <a href="https://www.linkedin.com/in/peter-wu-6148b7200/" target="_blank" rel="noreferrer">Peter Wu</a>
+                            as our Software Engineering course project. I worked across the backend to
+                            support tutor assignment and student request workflows.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-topline">
+                            <p class="card-label">Graphics experiment</p>
+                            <div class="card-links">
+                                <a href="https://github.com/quehorrifico/Ray-Marching-Infinte-Terrain-Generator" target="_blank" rel="noreferrer">Code</a>
+                            </div>
+                        </div>
+                        <h3>Ray-Marching Infinite Terrain Generator</h3>
+                        <p class="tech-stack">WebGL2, JavaScript</p>
+                        <p>
+                            Built with
+                            <a href="https://www.linkedin.com/in/youssef-bouhadiba/" target="_blank" rel="noreferrer">Youssef Bouhadiba</a>
+                            as a browser-based graphics experiment. We used ray marching, noise
+                            functions, and the Phong reflection model to render a stylized 3D island
+                            world directly in the browser.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section reveal" id="writing">
+                <div class="section-heading">
+                    <p class="section-label">Writing</p>
+                    <h2>Could I interest you in some of my literature?</h2>
+                </div>
+
+                <div class="writing-grid">
+                    <article class="writing-card">
+                        <div class="card-topline">
+                            <p class="card-label">Paper</p>
+                            <div class="card-links">
+                                <a href="docs/zeus-borrego-cnn-paper.pdf" target="_blank" rel="noreferrer">Read PDF</a>
+                            </div>
+                        </div>
+                        <h3>Convolutional Neural Networks</h3>
+                        <p>
+                            A college paper on CNN fundamentals and image-processing intuition. I wanted
+                            to include one academic artifact here alongside my software projects, since
+                            it shows how I like to learn and explain technical ideas.
+                        </p>
+                    </article>
+
+                    <article class="writing-card muted-card">
+                        <div class="card-topline">
+                            <p class="card-label">Coming soon</p>
+                        </div>
+                        <h3>Project notes and short essays</h3>
+                        <p>
+                            Over time this section will grow into a lightweight blog for build logs,
+                            technical write-ups, and thoughts on the kinds of software I want to make.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section reveal" id="home">
+                <div class="section-heading">
+                    <p class="section-label">Home</p>
+                    <h2>A little bit of personality.</h2>
+                </div>
+
+                <p class="section-intro">
+                    A space for those who deserve a place on the internet too.
+                </p>
+
+                <div class="image-gallery">
+                    <figure class="image-card">
+                        <img src="images/vivi.jpg" alt="Vivi" loading="lazy">
+                        <figcaption>Vivi</figcaption>
+                    </figure>
+                    <figure class="image-card is-link-card">
+                        <a class="image-link" href="tai/" aria-label="Visit Tai's page">
+                            <img src="images/tai.jpg" alt="Tai" loading="lazy">
+                        </a>
+                        <figcaption><a href="tai/">Tai</a></figcaption>
+                    </figure>
+                    <figure class="image-card is-link-card">
+                        <a class="image-link" href="po/" aria-label="Visit Po's page">
+                            <img src="images/po.jpg" alt="Po" loading="lazy">
+                        </a>
+                        <figcaption><a href="po/">Po</a></figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="contact-panel reveal" id="contact">
+                <p class="section-label">Contact</p>
+                <h2>If you'd like to talk, I'd love to hear from you.</h2>
+                <p>
+                    The best way to reach me is by
+                    <a href="mailto:zeusborrego@gmail.com">email</a> or
+                    <a href="https://www.linkedin.com/in/zeusborrego/" target="_blank" rel="noreferrer">LinkedIn</a>.
+                </p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; <span id="current-year">2026</span> Zeus Borrego</p>
+        </footer>
     </div>
-    </header>
 
-    <main>
-        <section class="about-section" id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm Zeus Borrego, a junior software engineer with a passion for network programming, Magic: The Gathering, and solving problems. I love tackling challenging problems and am constantly seeking opportunities to learn and grow in the field of software development.</p>
-        </section>
-
-        <section class="projects-section" id="projects">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3><a href="https://www.manatomb.app">Mana Tomb</a></h3>
-                <p>A Commander-focused Magic: The Gathering deck builder and card search tool. Built with Go and PostgreSQL, Mana Tomb emphasizes clean data pipelines, scalable architecture, and future expansion into deck analysis and AI-assisted feedback.</p>
-            </div>
-            <div class="project-card">
-                <h3><a href="https://github.com/quehorrifico/swatutor">SwaTutor</a></h3>
-                <p>Collaborated with a team of four to develop a web app that enables professors to assign tutors and students to request tutoring for courses. The backend was built using Python with Flask, while the frontend was developed with HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="project-card">
-                <h3><a href="https://github.com/quehorrifico/Ray-Marching-Infinte-Terrain-Generator">Ray-Marching Infinite Terrain Generator</a></h3>
-                <p>Collaborated with a partner to build an infinite terrain generator using WebGL2 and JavaScript, running directly in the browser. Implemented noise functions, the Phong Reflection Model, and Ray Marching to generate a 3D world of islands.</p>
-            </div>
-        </section>
-
-        <section class="images-section" id="images">
-            <h2>Images</h2>
-            <div class="image-gallery">
-                <div class="image-container">
-                    <img src="images/vivi.jpg" alt="Vivi!">
-                    <p class="image-caption">Vivi!</p>
-                </div>
-                <div class="image-container">
-                    <img src="images/tai.jpg" alt="A photo of my cat Tai">
-                    <p class="image-caption">Tai</p>
-                </div>
-                <div class="image-container">
-                    <img src="images/po.jpg" alt="A photo of my cat Po">
-                    <p class="image-caption">Po</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-            <h2>Contact</h2>
-	    <p>Feel free to reach out via <a href="https://www.linkedin.com/in/zeusborrego/">linkedin</a> or <a href="mailto:zeusborrego@gmail.com">email</a>.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Zeus Borrego. All rights reserved.</p>
-    </footer>
+    <script src="app.js"></script>
 </body>
 
 </html>

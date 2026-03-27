@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tiny, silly page for Tai.">
+    <title>Tai | Secret Cat File</title>
+    <script>
+        (function () {
+            const storageKey = 'zeus-theme';
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            try {
+                const savedTheme = localStorage.getItem(storageKey);
+                document.documentElement.dataset.theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            } catch (error) {
+                document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
+            }
+        }());
+    </script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pet-pages.css">
+</head>
+
+<body class="pet-page pet-page-tai">
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="../">Zeus Borrego</a>
+            <div class="header-actions">
+                <nav class="site-nav" aria-label="Pet navigation">
+                    <a href="../#home">bak 2 cat zone</a>
+                    <a href="../po/">go see po</a>
+                </nav>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch to dark mode">
+                    <span aria-hidden="true">☾</span>
+                    <span class="visually-hidden">Toggle color theme</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="pet-main">
+            <section class="pet-hero reveal">
+                <div class="pet-copy">
+                    <p class="section-label">tai dossier</p>
+                    <h1>tai</h1>
+                    <p class="pet-lede">
+                        henlo. i am tai. if room too loud, i leave to
+                        under safe furniture
+                    </p>
+                    <p class="pet-mini-note">
+                        best approached softly, respectfully, and maybe wif tiny snack diplomacy.
+                    </p>
+                    <ul class="pet-badges" aria-label="Tai traits">
+                        <li>skittish</li>
+                        <li>aloof</li>
+                        <li>professional peeker</li>
+                    </ul>
+                </div>
+
+                <figure class="pet-portrait">
+                    <img src="../images/tai.jpg" alt="Tai sitting and observing from a safe distance">
+                    <figcaption>official tai mood: i silently observe and judge.</figcaption>
+                </figure>
+            </section>
+
+            <div class="pet-grid">
+                <article class="pet-card reveal">
+                    <p class="section-label">mood</p>
+                    <h2>quiet zoomies, loud suspicions</h2>
+                    <p>
+                        tai trust nobody rite away. sock on floor? suspicious. leaf at window?
+                        deeply suspicious. bag rustle? okay maybe diplomacy can begin.
+                    </p>
+                </article>
+
+                <article class="pet-card reveal">
+                    <p class="section-label">special movez</p>
+                    <h2>peekin, hidin, judgin</h2>
+                    <p>
+                        tai excel at hallway surveillance, strategic retreat, and bein exactly
+                        one room away from all nonsense. sometimes tail visible.
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <footer class="site-footer pet-footer">
+            <p>tai approvez dis page wif cautious squint.</p>
+        </footer>
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+
+</html>

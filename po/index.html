@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tiny, silly page for Po.">
+    <title>Po | Snack Hero Profile</title>
+    <script>
+        (function () {
+            const storageKey = 'zeus-theme';
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            try {
+                const savedTheme = localStorage.getItem(storageKey);
+                document.documentElement.dataset.theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            } catch (error) {
+                document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
+            }
+        }());
+    </script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pet-pages.css">
+</head>
+
+<body class="pet-page pet-page-po">
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="../">Zeus Borrego</a>
+            <div class="header-actions">
+                <nav class="site-nav" aria-label="Pet navigation">
+                    <a href="../#home">bak 2 cat zone</a>
+                    <a href="../tai/">go see tai</a>
+                </nav>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch to dark mode">
+                    <span aria-hidden="true">☾</span>
+                    <span class="visually-hidden">Toggle color theme</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="pet-main">
+            <section class="pet-hero reveal">
+                <div class="pet-copy">
+                    <p class="section-label">po dossier</p>
+                    <h1>po</h1>
+                    <p class="pet-lede">
+                        henlo yes i am po. i hear bag rustle from nine counties away. i am brave,
+                        i am hongry, and i inspect danger if maybe edible.
+                    </p>
+                    <p class="pet-mini-note">
+                        if snack exist anywhere in known universe, po already filing claim on it.
+                    </p>
+                    <ul class="pet-badges" aria-label="Po traits">
+                        <li>glutton</li>
+                        <li>brave</li>
+                        <li>silly</li>
+                    </ul>
+                </div>
+
+                <figure class="pet-portrait">
+                    <img src="../images/po.jpg" alt="Po looking curious and ready for food">
+                    <figcaption>official po policy: if it crinkle, i investigate immediately.</figcaption>
+                </figure>
+            </section>
+
+            <div class="pet-grid">
+                <article class="pet-card reveal">
+                    <p class="section-label">hongry</p>
+                    <h2>snaccs r lyfe.</h2>
+                    <p>
+                        ebry meal deserve encore, side quest, and highly justified second dinner.
+                        kitchen patrol happen on sacred schedule, mostly whenever po remembers food
+                        probably still exists.
+                    </p>
+                </article>
+
+                <article class="pet-card reveal">
+                    <p class="section-label">heroism</p>
+                    <h2>no gutz no gloree</h2>
+                    <p>
+                        weird noise in hall? po go check. mysterious box? po go check. ghost?
+                        maybe check if ghost drop treats.
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <footer class="site-footer pet-footer">
+            <p>po demandz payment for dis page in chimken.</p>
+        </footer>
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+
+</html>
